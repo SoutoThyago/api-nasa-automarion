@@ -1,0 +1,9 @@
+//Status Code
+pm.test("Validar que o status code é igual a 200", () =>{
+    pm.response.to.have.status(200);
+});
+
+//Contract
+pm.test(pm.info.requestName + " | Validar contrato da requisição", () => {
+    pm.response.to.have.jsonSchema(pm.variables.get("schema"));
+});

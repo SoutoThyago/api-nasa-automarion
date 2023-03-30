@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "2b6f7cf0-d062-4086-9ffb-8acd0ee462ab",
+		"name": "my_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14123011"
+	},
+	"item": [
+		{
+			"name": "GET Apod_Great",
+			"item": [
+				{
+					"name": "GET Apod_Great",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"schema\", {\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"required\": [\r",
+									"        \"copyright\",\r",
+									"        \"date\",\r",
+									"        \"explanation\",\r",
+									"        \"hdurl\",\r",
+									"        \"media_type\",\r",
+									"        \"service_version\",\r",
+									"        \"title\",\r",
+									"        \"url\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"copyright\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The copyright Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"Aleix RoigAstroCatInfo\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"date\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The date Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"2023-03-29\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"explanation\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The explanation Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"Which star created this bubble? It wasn't the bright star on the bubble's right. And it also wasn't a giant space dolphin. It was the star in the blue nebula's center, a famously energetic Wolf-Rayet star. Wolf-Rayet stars in general have over 20 times the mass of our Sun and expel fast particle winds that can create iconic looking nebulas. In this case, the resulting star bubble spans over 60 light years, is about 70,000 years old, and happens to look like the head of a dolphin.  Named Sh2-308 and dubbed the Dolphin-Head Nebula, the gas ball lies about 5,000 light years away and covers as much sky as the full moon -- although it is much dimmer. The nearby red-tinged clouds on the left of the featured image may owe their glow and shape to energetic light emitted from the same Wolf-Rayet star.\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"hdurl\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The hdurl Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"https://apod.nasa.gov/apod/image/2303/DolphinReef_Roig_5688.jpg\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"media_type\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The media_type Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"image\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"service_version\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The service_version Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"v1\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"title\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The title Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"Sh2-308: A Dolphin Shaped Star Bubble\"\r",
+									"            ]\r",
+									"        },\r",
+									"        \"url\": {\r",
+									"            \"type\": \"string\",\r",
+									"            \"default\": \"\",\r",
+									"            \"title\": \"The url Schema\",\r",
+									"            \"examples\": [\r",
+									"                \"https://apod.nasa.gov/apod/image/2303/DolphinReef_Roig_960.jpg\"\r",
+									"            ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"copyright\": \"Aleix RoigAstroCatInfo\",\r",
+									"        \"date\": \"2023-03-29\",\r",
+									"        \"explanation\": \"Which star created this bubble? It wasn't the bright star on the bubble's right. And it also wasn't a giant space dolphin. It was the star in the blue nebula's center, a famously energetic Wolf-Rayet star. Wolf-Rayet stars in general have over 20 times the mass of our Sun and expel fast particle winds that can create iconic looking nebulas. In this case, the resulting star bubble spans over 60 light years, is about 70,000 years old, and happens to look like the head of a dolphin.  Named Sh2-308 and dubbed the Dolphin-Head Nebula, the gas ball lies about 5,000 light years away and covers as much sky as the full moon -- although it is much dimmer. The nearby red-tinged clouds on the left of the featured image may owe their glow and shape to energetic light emitted from the same Wolf-Rayet star.\",\r",
+									"        \"hdurl\": \"https://apod.nasa.gov/apod/image/2303/DolphinReef_Roig_5688.jpg\",\r",
+									"        \"media_type\": \"image\",\r",
+									"        \"service_version\": \"v1\",\r",
+									"        \"title\": \"Sh2-308: A Dolphin Shaped Star Bubble\",\r",
+									"        \"url\": \"https://apod.nasa.gov/apod/image/2303/DolphinReef_Roig_960.jpg\"\r",
+									"    }]\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Status Code\r",
+									"pm.test(\"Validar que o status code é igual a 200\", () =>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Contract\r",
+									"pm.test(pm.info.requestName + \" | Validar contrato da requisição\", () => {\r",
+									"    pm.response.to.have.jsonSchema(pm.variables.get(\"schema\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}/planetary/apod?api_key=DEMO_KEY",
+							"host": [
+								"{{API}}"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "DEMO_KEY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Apod_Fail",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.variables.set(\"schema\", {\r",
+									"    \"type\": \"object\",\r",
+									"    \"default\": {},\r",
+									"    \"title\": \"Root Schema\",\r",
+									"    \"required\": [\r",
+									"        \"error\"\r",
+									"    ],\r",
+									"    \"properties\": {\r",
+									"        \"error\": {\r",
+									"            \"type\": \"object\",\r",
+									"            \"default\": {},\r",
+									"            \"title\": \"The error Schema\",\r",
+									"            \"required\": [\r",
+									"                \"code\",\r",
+									"                \"message\"\r",
+									"            ],\r",
+									"            \"properties\": {\r",
+									"                \"code\": {\r",
+									"                    \"type\": \"string\",\r",
+									"                    \"default\": \"\",\r",
+									"                    \"title\": \"The code Schema\",\r",
+									"                    \"examples\": [\r",
+									"                        \"API_KEY_INVALID\"\r",
+									"                    ]\r",
+									"                },\r",
+									"                \"message\": {\r",
+									"                    \"type\": \"string\",\r",
+									"                    \"default\": \"\",\r",
+									"                    \"title\": \"The message Schema\",\r",
+									"                    \"examples\": [\r",
+									"                        \"An invalid api_key was supplied. Get one at https://api.nasa.gov:443\"\r",
+									"                    ]\r",
+									"                }\r",
+									"            },\r",
+									"            \"examples\": [{\r",
+									"                \"code\": \"API_KEY_INVALID\",\r",
+									"                \"message\": \"An invalid api_key was supplied. Get one at https://api.nasa.gov:443\"\r",
+									"            }]\r",
+									"        }\r",
+									"    },\r",
+									"    \"examples\": [{\r",
+									"        \"error\": {\r",
+									"            \"code\": \"API_KEY_INVALID\",\r",
+									"            \"message\": \"An invalid api_key was supplied. Get one at https://api.nasa.gov:443\"\r",
+									"        }\r",
+									"    }]\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const result_json = pm.response.json();\r",
+									"//Status Code\r",
+									"pm.test(\"Validar que o status code é igual a 403\", () => {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"//Response Code\r",
+									"pm.test(\"Validar API_KEY inválida\", () => {    \r",
+									"    pm.expect(result_json.error.code).to.be.equal(\"API_KEY_INVALID\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API}}/planetary/apod?api_key=DEMO_B",
+							"host": [
+								"{{API}}"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "DEMO_B"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

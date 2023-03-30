@@ -1,0 +1,10 @@
+const result_json = pm.response.json();
+//Status Code
+pm.test("Validar que o status code é igual a 403", () => {
+    pm.response.to.have.status(403);
+});
+
+//Response Code
+pm.test("Validar API_KEY inválida", () => {    
+    pm.expect(result_json.error.code).to.be.equal("API_KEY_INVALID")
+});
