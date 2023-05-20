@@ -1,0 +1,50 @@
+//add var value
+var result_json;
+pm.test("Dado que eu realize o request Get", () => {
+    ((result_json)) = pm.response.json();
+});
+
+//Status Code
+pm.test("Então o status code é igual a 403", () => {
+    pm.response.to.have.status(403);
+});
+
+//Response time
+pm.test("E o response time é menor 1255 ms", () => {
+    pm.expect(pm.response.responseTime).to.be.lessThan(1255);
+});
+
+//Response size
+pm.test("E o response size é menor que 138 B", () => {
+    pm.expect(pm.response.responseSize).to.be.lessThan(138);
+});
+
+//Response code
+pm.test("E a tag code não deve ser null", () => {    
+    pm.expect(result_json.error.code).to.be.not.null;
+});
+
+//Response code
+pm.test("E a tag code exiba o código do erro", () => {    
+    pm.expect(result_json.error.code).to.be.equal("API_KEY_INVALID")
+});
+
+//Response message
+pm.test("E a tag message não deve ser null", () => {    
+    pm.expect(result_json.error.message).to.be.not.null;
+});
+
+//Response message
+pm.test("E a tag message exiba a mensagem do erro", () => {    
+    pm.expect(result_json.error.message).to.contains("An invalid api_key");
+});
+
+//Contract
+pm.test("E o contrato de resposta foi respeitado", () => {
+    pm.response.to.have.jsonSchema(pm.variables.get("schema"));
+});
+
+
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("An invalid api_key");
+});

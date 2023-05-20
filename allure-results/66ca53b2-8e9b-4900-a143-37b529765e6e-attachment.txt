@@ -1,0 +1,25 @@
+//add var value
+var result_json;
+pm.test("Dado que eu realize o request Get", () => {
+    ((result_json)) = pm.response.json();
+});
+
+//Status Code
+pm.test("Então o status code é igual a 200", () =>{
+    pm.response.to.have.status(200);
+});
+
+//Response time
+pm.test("E o response time é menor 1255 ms", () => {
+    pm.expect(pm.response.responseTime).to.be.lessThan(1255);
+});
+
+//Response size
+pm.test("E o response size é menor que 1100 B", () => {
+    pm.expect(pm.response.responseSize).to.be.lessThan(1100);
+});
+
+//Contract
+pm.test("E o contrato de resposta foi respeitado", () => {
+    pm.response.to.have.jsonSchema(pm.variables.get("schema"));
+});

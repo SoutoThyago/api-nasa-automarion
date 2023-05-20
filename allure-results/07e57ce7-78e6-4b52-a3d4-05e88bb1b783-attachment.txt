@@ -1,0 +1,47 @@
+pm.variables.set("schema", {
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "error"
+    ],
+    "properties": {
+        "error": {
+            "type": "object",
+            "default": {},
+            "title": "The error Schema",
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The code Schema",
+                    "examples": [
+                        "API_KEY_INVALID"
+                    ]
+                },
+                "message": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The message Schema",
+                    "examples": [
+                        "An invalid api_key was supplied. Get one at https://api.nasa.gov:443"
+                    ]
+                }
+            },
+            "examples": [{
+                "code": "API_KEY_INVALID",
+                "message": "An invalid api_key was supplied. Get one at https://api.nasa.gov:443"
+            }]
+        }
+    },
+    "examples": [{
+        "error": {
+            "code": "API_KEY_INVALID",
+            "message": "An invalid api_key was supplied. Get one at https://api.nasa.gov:443"
+        }
+    }]
+});
